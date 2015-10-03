@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+        <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+        <title>{{slug}}</title>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Blue team</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" placeholder="Insert ID" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-success">Enter</button>
+                    </form>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <div class="container" style="
+                 text-align: center;">
+
+                <h1>Container controller</h1>
+                <p>Obtaining information about your shipment is now easier using Container Controller. </p>
+                <img style="align: inherit;" src="http://www.fondear.org/infonautic/barco/Motores_Helices/Flaps/Mercante.jpg" border="0">
+
+            </div>
+        </div> 
+
+        <div class="neighborhood-guides">
+            <div class="container">
+                <h2>Parameters - {{slug}}</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <h3>Humidity</h3>
+                            <input type="text" disabled placeholder="value" class="form-control" value="{{humidity}}">
+                        </div>
+
+                        <div class="row">
+                            <h3>Temperature</h3>
+                            <input type="text" disabled placeholder="value" class="form-control" value="{{temperature}} &deg;C">
+                        </div>
+
+                        <div class="row">
+                            <h3>Luminity</h3>
+                            <input type="text" disabled placeholder="value" class="form-control" value="{{luminance}} Cd/m&sup2;">
+                        </div>
+                    </div>
+                    <div class="col-md-8 pull right" style="
+    text-align: center;
+                         ">  
+
+                        <h3 style=" text-align:center;">Position</h3>
+                        <iframe id="position" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCN_091Vz9Xyq0uEbLpGju8XnyXx_pusT4&amp;q=({{lat}},{{lng}})" allowfullscreen="" width="450" height="250" frameborder="0" style="
+    align-content: center;
+"></iframe>
+
+
+
+                    </div>  
+
+                       
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        <hr>
+
+        <footer>
+            <p>       &copy; Company 2015 BlueTeam</p>
+        </footer>
+
+    </body>
+
+</html>
