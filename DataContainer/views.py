@@ -1,5 +1,5 @@
 import requests 
-from django.shortcuts import render 
+from django.shortcuts import render, redirect
 import urllib2, urllib
 import json
 from .forms import *
@@ -42,6 +42,7 @@ def get_data(request, slug):
 		lat = response.json()['location']['lat']
 		lng = response.json()['location']['lng']
 
+		humidity = float(humidity)/1000000
 		return render(request,'container.html', 
 			{'temperature' : temperature,
 			'humidity'     : humidity,
@@ -58,3 +59,8 @@ def add_data(request):
 	if form.is_valid():
 		pass
 	pass
+	return redirect('index')
+
+def index(request):
+	form = ContainerForm()
+	
