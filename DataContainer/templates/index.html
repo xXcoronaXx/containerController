@@ -24,7 +24,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <form class="navbar-form navbar-right">
-                        <a href="index.html" class="btn btn-info" role="button" > Add new</a>
+                        
                         <div class="form-group">
                             <input type="text" placeholder="Insert ID" class="form-control">
                         </div>
@@ -46,42 +46,58 @@
 
         <div class="neighborhood-guides">
             <div class="container">
-                <h2>Parameters - {{slug}}</h2>
+                <h2>List of IDs</h2>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="row">
-                            <h3>Humidity</h3>
-                            <input type="text" disabled placeholder="value" class="form-control" value="{{humidity}}">
+                            <a href="#">Container 1</a>
+
+                        </div>
+                        <div class="row">
+                            <a href="#">Container 2</a>
+
+                        </div> <div class="row">
+                            <a href="#">Container 3</a>
+
+                        </div> <div class="row">
+                            <a href="#">Container 4</a>
+
+                        </div> <div class="row">
+                            <a href="#">Container 5</a>
+
+                        </div> <div class="row">
+                            <a href="#">Container 6</a>
+
+                        </div> <div class="row">
+                            <a href="#">Container 7</a>
+
                         </div>
 
-                        <div class="row">
-                            <h3>Temperature</h3>
-                            <input type="text" disabled placeholder="value" class="form-control" value="{{temperature}} &deg;C">
-                        </div>
 
+
+
+                    </div>
+                    <div class="col-md-4">
                         <div class="row">
-                            <h3>Luminity</h3>
-                            <input type="text" disabled placeholder="value" class="form-control" value="{{luminance}} Cd/m&sup2;">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="email">Email address:</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+
                         </div>
                     </div>
-                    <div class="col-md-8 pull right" style="
-                         text-align: center;
-                         ">  
-
-                        <h3 style=" text-align:center;">Position</h3>
-                        <iframe id="position" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCN_091Vz9Xyq0uEbLpGju8XnyXx_pusT4&amp;q=({{lat}},{{lng}})" allowfullscreen="" width="450" height="250" frameborder="0" style="
-                                align-content: center;
-                                "></iframe>
-
-
-
-                    </div>  
-
-
 
                 </div>
-            </div>
-        </div>
 
 
 
