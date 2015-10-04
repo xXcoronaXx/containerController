@@ -2,6 +2,8 @@ import requests
 from django.shortcuts import render 
 import urllib2, urllib
 import json
+from .forms import *
+from .models import *
 
 # Create your views here.
 def get_data(request, slug):
@@ -49,4 +51,10 @@ def get_data(request, slug):
 			'slug'		   : slug,
 			})
 	except:
-		return render(request,'container.html',{})
+		return render(request,'container.html',{ 'slug': 'No encontrado'})
+
+def add_data(request):
+	form = ContainerForm(request.POST)
+	if form.is_valid():
+		pass
+	pass
