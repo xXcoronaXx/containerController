@@ -57,10 +57,12 @@ def get_data(request, slug):
 def add_data(request):
 	form = ContainerForm(request.POST)
 	if form.is_valid():
-		pass
-	pass
+		obj = Container.objects.create(id_container=form.cleaned_data['id_container'],text=form.cleaned_data['text'])
+		obj.save()
 	return redirect('index')
 
 def index(request):
 	form = ContainerForm()
+	containers = Container.objects.all()
+	return render(request,'index.html',{'form':form, 'containers': containers})
 	
