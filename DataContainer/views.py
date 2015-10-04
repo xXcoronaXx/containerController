@@ -1,5 +1,5 @@
 import requests 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 import urllib2, urllib
 import json
 from .forms import *
@@ -7,7 +7,8 @@ from .models import *
 
 # Create your views here.
 def get_data(request, slug):
-	try:		
+	try:
+		container = get_object_or_404( Container, id_container=slug )
 		req = urllib2.Request('http://hackathon.ttcloud.net:10026/v1/contextEntities/'+slug)
 		req.add_header('Accept', 'application/json')
 		req.add_header('fiware-service', 'todosincluidos')
@@ -50,6 +51,7 @@ def get_data(request, slug):
 			'lat'          : lat,
 			'lng'          : lng,
 			'slug'		   : slug,
+			'container'    : container,
 			})
 	except:
 		return render(request,'container.html',{ 'slug': 'No encontrado'})
